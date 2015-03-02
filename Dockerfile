@@ -36,8 +36,8 @@ ADD phabricator.conf /etc/apache2/sites-available/phabricator.conf
 RUN ln -s /etc/apache2/sites-available/phabricator.conf /etc/apache2/sites-enabled/phabricator.conf
 RUN rm -f /etc/apache2/sites-enabled/000-default.conf
 
-RUN cd /opt/ && git clone https://github.com/facebook/libphutil.git
-RUN cd /opt/ && git clone https://github.com/facebook/arcanist.git
+RUN cd /opt/ && git clone https://github.com/facebook/libphutil.git && cd libphutil && git checkout b6200342f22434b98ba30c2ceb870cdd73c9a5b9
+RUN cd /opt/ && git clone https://github.com/facebook/arcanist.git && cd arcanist && git checkout d8182cf55d501b1359f6f91bc0b75b50baa08037
 RUN cd /opt/ && git clone https://github.com/ygrei/phabricator.git
 
 RUN mkdir -p '/var/repo/'

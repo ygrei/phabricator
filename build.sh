@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build --no-cache -t ygreif/phab .
+docker build -t ygreif/phab .
