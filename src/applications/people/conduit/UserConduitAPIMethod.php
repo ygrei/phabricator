@@ -43,7 +43,6 @@ abstract class UserConduitAPIMethod extends ConduitAPIMethod {
       'userName'     => $user->getUserName(),
       'realName'     => $user->getRealName(),
       'primaryEmail' => $email,
-      'image'        => $user->getProfileImageURI(),
       'uri'          => PhabricatorEnv::getURI('/p/'.$user->getUsername().'/'),
       'roles'        => $roles,
     );
